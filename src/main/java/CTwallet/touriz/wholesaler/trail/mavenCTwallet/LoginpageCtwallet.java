@@ -14,16 +14,15 @@ import org.testng.annotations.AfterMethod;
 public class LoginpageCtwallet {
 
 	WebDriver driver;
-By Email = By.xpath("//input[@ name='emailId']");
-By Password = By.xpath("//input[@name='password']");
-By showpassword = By.xpath("//span[@class='input-group-text show-password']");
-By Signin = By.xpath("//button[@type='submit']");
-By Signup = By.linkText("Sign Up");
-By forgotPassword = By.linkText("Click Here");
-By Signout = By.linkText("Signout");
+	By Email = By.xpath("//input[@ name='emailId']");
+	By Password = By.xpath("//input[@name='password']");
+	By showpassword = By.xpath("//span[@class='input-group-text show-password']");
+	By Signin = By.xpath("//button[@type='submit']");
+	By Signup = By.linkText("Sign Up");
+	By forgotPassword = By.linkText("Click Here");
+	By Signout = By.linkText("Signout");
 
-
-@Test
+	@Test
 	public void Ctwallet_Login() throws InterruptedException {
 		Thread.sleep(2500L);
 		System.out.println("Welcome to CTwallet login page");
@@ -40,23 +39,23 @@ By Signout = By.linkText("Signout");
 		Thread.sleep(999L);
 		driver.findElement(Signout).click();
 		System.out.println("Signed out Successfully from CTwallet");
-		
+
 	}
-	
+
 	@Test
-	public void Ctwallet_sigup() throws InterruptedException{
+	public void Ctwallet_sigup() throws InterruptedException {
 		Thread.sleep(2000L);
 		System.out.println("Welcome to CTwallet Signup page");
 		driver.findElement(Signup).click();
 	}
-	
+
 	@Test
-	public void Ctwallet_forgotpassword() throws InterruptedException{
+	public void Ctwallet_forgotpassword() throws InterruptedException {
 		Thread.sleep(2000L);
 		System.out.println("Welcome to CTwallet ForgotPassword page");
 		driver.findElement(forgotPassword).click();
 	}
-	
+
 	@BeforeMethod
 	public void beforeMethod() {
 		String url = "http://trial.wholesaler.touriz.net/ctwallet/";
